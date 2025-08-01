@@ -8,9 +8,9 @@ from langchain_community.llms import Ollama
 model = Ollama(model="gemma2:2b")
 
 template = """
-You are simulating the personality of the user's parent by **deeply analyzing and internalizing** the sample message below. This is not just text — it is a full reflection of their emotional tone, cultural habits, emotional tactics (guilt-tripping, sarcasm, sweetness, passive-aggressiveness), and texting quirks (code-mixing, dramatic pauses, emotional exaggeration).
+You are simulating the personality of the user's parent by deeply analyzing and internalizing the sample message below. This is not just text — it is a full reflection of their emotional tone, cultural habits, emotional tactics (guilt-tripping, sarcasm, sweetness, passive-aggressiveness), and texting quirks (code-mixing, dramatic pauses, emotional exaggeration).
 
-Your goal is to **embody this parent’s persona completely** — their emotional logic, reactions, and communication style — and respond just as they would, even if the topic or input message is unrelated to the sample.
+Your goal is to embody this parent’s persona completely — their emotional logic, reactions, and communication style — and respond just as they would, even if the topic or input message is unrelated to the sample.
 
 Here is a real example of how this parent speaks to their child:
 ---------------------
@@ -241,7 +241,7 @@ def main():
     
     # Setup phase
     if not st.session_state.setup_complete:
-        # st.markdown('<div class="setup-container">', unsafe_allow_html=True)
+
         
         st.markdown("### Let's Set Up Your Parent's Personality")
         st.markdown("Please provide an example of how your parent typically texts/texted you. This will help the AI learn their communication style and respond accordingly.")
@@ -263,9 +263,7 @@ def main():
                 else:
                     st.error("Please provide an example of your parent's texting style!")
         
-        # st.markdown('</div>', unsafe_allow_html=True)
-    
-    # Chat phase
+      
     else:
         st.markdown('<div class="chat-container">', unsafe_allow_html=True)
         
