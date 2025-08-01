@@ -1,0 +1,6 @@
+streamlit
+langchain
+langchain-community
+ollama
+urllib3
+typing-extensions
